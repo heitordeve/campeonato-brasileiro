@@ -1,0 +1,181 @@
+<mvc:View xmlns:table="sap.ui.table"
+    xmlns:cards="sap.f.cards" controllerName="campeonatobrasileiro.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+            <ObjectHeader title="Campeonato Brasileiro 2023 - FioriNET" number="9ª" numberUnit="Rodada" />
+
+            <IconTabBar>
+                <items>
+                    <IconTabFilter text="Classificação" icon="sap-icon://competitor" key="classificacao">
+                        <!-- Tabela -->
+                        <Table>
+                            <columns>
+                                <!-- Posição -->
+                                <Column>
+                                    <Text text="Posição" />
+                                </Column>
+                                <!-- Escudo -->
+                                <Column>
+                                    <Text text="" />
+                                </Column>
+                                <!-- Nome do Time -->
+                                <Column>
+                                    <Text text="Time" />
+                                </Column>
+                                <!-- Pontos -->
+                                <Column>
+                                    <Text text="Pts" />
+                                </Column>
+                                <!-- Partidas Jogadas -->
+                                <Column>
+                                    <Text text="PJ" />
+                                </Column>
+                                <!-- Vitórias -->
+                                <Column>
+                                    <Text text="VIT" />
+                                </Column>
+                                <!-- Empates -->
+                                <Column>
+                                    <Text text="E" />
+                                </Column>
+                                <!-- Derrotas -->
+                                <Column>
+                                    <Text text="DER" />
+                                </Column>
+                                <!-- Gols Marcados -->
+                                <Column>
+                                    <Text text="GM" />
+                                </Column>
+                                <!-- Gols Sofridos -->
+                                <Column>
+                                    <Text text="GC" />
+                                </Column>
+                                <!-- Saldo de Gols -->
+                                <Column>
+                                    <Text text="SG" />
+                                </Column>
+                            </columns>
+
+                            <items>
+                                <ColumnListItem>
+                                    <cells>
+                                        <!-- 1ª Coluna posição-->
+                                        <Text text="1" />
+                                        <!-- 2ª Coluna escudo-->
+                                        <Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Botafogo_de_Futebol_e_Regatas_logo.svg/1200px-Botafogo_de_Futebol_e_Regatas_logo.svg.png" width="30%" />
+                                        <!-- 3ª Coluna nome do time-->
+                                        <Text text="Botafogo" />
+                                        <!-- 4ª Coluna pontos-->
+                                        <Text text="21" />
+                                        <!-- 5ª Coluna jogos-->
+                                        <Text text="8" />
+                                        <!-- 6ª Coluna vitórias-->
+                                        <Text text="7" />
+                                        <!-- 7ª Coluna Empates-->
+                                        <Text text="0" />
+                                        <!-- 8ª Coluna Derrotas-->
+                                        <Text text="1" />
+                                        <!-- 9ª Coluna Gols Marcados-->
+                                        <Text text="16" />
+                                        <!-- 10ª Coluna Gols Sofridos-->
+                                        <Text text="6" />
+                                        <!-- 11ª Coluna Saldo de Gols-->
+                                        <Text text="10" />
+                                    </cells>
+                                </ColumnListItem>
+                                <ColumnListItem>
+                                    <cells>
+                                        <!-- 1ª Coluna posição-->
+                                        <Text text="2" />
+                                        <!-- 2ª Coluna escudo-->
+                                        <Image src="https://w7.pngwing.com/pngs/177/904/png-transparent-sociedade-esportiva-palmeiras-campeonato-paulista-copa-do-brasil-choque-rei-paulista-derby-futebol-brasil-emblem-sport-logo.png" width="40%" />
+                                        <!-- 3ª Coluna nome do time-->
+                                        <Text text="Palmeiras" />
+                                        <!-- 4ª Coluna pontos-->
+                                        <Text text="16" />
+                                        <!-- 5ª Coluna jogos-->
+                                        <Text text="4" />
+                                        <!-- 6ª Coluna vitórias-->
+                                        <Text text="4" />
+                                        <!-- 7ª Coluna Empates-->
+                                        <Text text="0" />
+                                        <!-- 8ª Coluna Derrotas-->
+                                        <Text text="1" />
+                                        <!-- 9ª Coluna Gols Marcados-->
+                                        <Text text="17" />
+                                        <!-- 10ª Coluna Gols Sofridos-->
+                                        <Text text="7" />
+                                        <!-- 11ª Coluna Saldo de Gols-->
+                                        <Text text="10" />
+                                    </cells>
+                                </ColumnListItem>
+                            </items>
+                        </Table>
+                    </IconTabFilter>
+
+                    <IconTabFilter text="Partidas" icon="sap-icon://soccer" key="partidas">
+                        <Table >
+                            <columns> 
+                                <Column hAlign="Center">
+                                    <Text text="9ª Rodada" />
+                                </Column>
+                            </columns>
+                            <items >
+                                <ColumnListItem >
+                                    <cells >
+                                        <Text textAlign="Center" text="Resultados" />
+                                        
+                                    </cells>
+                                </ColumnListItem>
+                               
+                            </items>
+                            
+                    </Table>
+                    <Table>
+                        <columns>
+                            <Column hAlign="Center"> 
+                                
+                            </Column>
+                            <Column hAlign="Center">
+                                
+                            </Column>
+                            <Column>
+                                
+                            </Column>
+                        </columns>
+                        <items>
+                            <ColumnListItem>
+                                <cells>
+                                    <Image src="https://logodetimes.com/wp-content/uploads/fortaleza.png" width="40%" />
+                                    <Text text="Fortaleza x Bahia &#13; 03/06/2023 16:00" />
+                                    <Image src="https://logodetimes.com/wp-content/uploads/bahia.png" width="40%" />                                    
+                                </cells>
+                            </ColumnListItem>    
+                            <ColumnListItem>
+                                <cells>
+                                    <Image src="https://logodetimes.com/wp-content/uploads/cruzeiro.png" width="40%" />
+                                    <Text text="Cruzeiro x Atlético &#13; 03/06/2023 18:30" />
+                                
+                                    <Image src="https://logodetimes.com/wp-content/uploads/atletico-mineiro.png" width="40%" />                                    
+                                </cells>
+                            </ColumnListItem>   
+                            <ColumnListItem>
+                                <cells>
+                                    <Image src="https://logodetimes.com/wp-content/uploads/athletico-paranaense.png" width="40%" />
+                                    <Text text="Athletico-PR x Botafogo &#13; 03/06/2023 18:30" />
+                                    
+                                    <Image src="https://logodetimes.com/wp-content/uploads/botafogo.png" width="40%" />                                    
+                                </cells>
+                            </ColumnListItem>                      
+                        </items>
+                        
+
+                    </Table>
+                </IconTabFilter>
+            </items>
+        </IconTabBar>
+    </content>
+</Page>
+</mvc:View>

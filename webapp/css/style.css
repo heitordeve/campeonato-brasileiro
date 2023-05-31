@@ -1,0 +1,11 @@
+/* Enter your custom styles here */
+.title-align-left{
+    align-items: flex-start;
+    font-weight: bold;
+}
+
+.title-align-center{
+    align-items: center;
+    font-weight: 600;
+    font-size: 12px;
+}
