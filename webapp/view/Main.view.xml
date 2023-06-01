@@ -116,63 +116,47 @@
                     </IconTabFilter>
 
                     <IconTabFilter text="Partidas" icon="sap-icon://soccer" key="partidas">
-                        <Table >
-                            <columns> 
-                                <Column hAlign="Center">
-                                    <Text text="9ª Rodada" />
+                        <Table headerText="9ª Rodada"
+                        inset="false">
+                            <columns>
+                                <Column width="10%" hAlign="Right">
+                                    <Text text="" />
                                 </Column>
-                            </columns>
-                            <items >
-                                <ColumnListItem >
-                                    <cells >
-                                        <Text textAlign="Center" text="Resultados" />
-                                        
+                        
+                                <Column width="10%" hAlign="Center">
+                                    <Text text="Resultados" />
+                                </Column>
+                        
+                                <Column width="10%" hAlign="Left">
+                                    <Text text="" />
+                                </Column>
+                        
+                            </columns>   
+                            <items>
+                                <ColumnListItem vAlign="Middle">
+                                    <cells>
+                                        <Image src="https://cdn.api-futebol.com.br/escudos/638d34c76d067.svg" width="15%" />
+                                        <VBox>
+                                            <Text text="Fortaleza x Bahia" />
+                                            <Text text="03/06/2023 16:00" />
+                                        </VBox>
+                                        <Image src="https://cdn.api-futebol.com.br/escudos/638d34a8b6bd8.svg" width="15%" />
                                     </cells>
                                 </ColumnListItem>
-                               
-                            </items>
-                            
-                    </Table>
-                    <Table>
-                        <columns>
-                            <Column hAlign="Center"> 
-                                
-                            </Column>
-                            <Column hAlign="Center">
-                                
-                            </Column>
-                            <Column>
-                                
-                            </Column>
-                        </columns>
-                        <items>
-                            <ColumnListItem>
-                                <cells>
-                                    <Image src="https://logodetimes.com/wp-content/uploads/fortaleza.png" width="40%" />
-                                    <Text text="Fortaleza x Bahia &#13; 03/06/2023 16:00" />
-                                    <Image src="https://logodetimes.com/wp-content/uploads/bahia.png" width="40%" />                                    
-                                </cells>
-                            </ColumnListItem>    
-                            <ColumnListItem>
-                                <cells>
-                                    <Image src="https://logodetimes.com/wp-content/uploads/cruzeiro.png" width="40%" />
-                                    <Text text="Cruzeiro x Atlético &#13; 03/06/2023 18:30" />
-                                
-                                    <Image src="https://logodetimes.com/wp-content/uploads/atletico-mineiro.png" width="40%" />                                    
-                                </cells>
-                            </ColumnListItem>   
-                            <ColumnListItem>
-                                <cells>
-                                    <Image src="https://logodetimes.com/wp-content/uploads/athletico-paranaense.png" width="40%" />
-                                    <Text text="Athletico-PR x Botafogo &#13; 03/06/2023 18:30" />
-                                    
-                                    <Image src="https://logodetimes.com/wp-content/uploads/botafogo.png" width="40%" />                                    
-                                </cells>
-                            </ColumnListItem>                      
-                        </items>
                         
-
+                                <ColumnListItem vAlign="Middle">
+                                    <cells>
+                                        <Image src="https://cdn.api-futebol.com.br/escudos/638d34984830b.svg" width="15%" />
+                                        <VBox>
+                                            <Text text="Cruzeiro x Atlético-MG" />
+                                            <Text text="03/06/2023 18:30" />
+                                        </VBox>
+                                        <Image src="https://cdn.api-futebol.com.br/escudos/638d3494f3380.svg" width="15%" />
+                                    </cells>
+                                </ColumnListItem>
+                            </items>                         
                     </Table>
+                    
                 </IconTabFilter>
             </items>
         </IconTabBar>
