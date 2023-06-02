@@ -4,13 +4,13 @@
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
         <content>
-            <ObjectHeader title="Campeonato Brasileiro 2023 - FioriNET" number="9ª" numberUnit="Rodada" />
+            <ObjectHeader title="{ModeloDadosGerais>/campeonato}" number="{ModeloDadosGerais>/rodada}" numberUnit="Rodada" />
 
             <IconTabBar>
                 <items>
                     <IconTabFilter text="Classificação" icon="sap-icon://competitor" key="classificacao">
                         <!-- Tabela -->
-                        <Table>
+                        <Table items="{ClassificacaoModel>/Classificacao}">
                             <columns>
                                 <!-- Posição -->
                                 <Column>
@@ -62,53 +62,27 @@
                                 <ColumnListItem>
                                     <cells>
                                         <!-- 1ª Coluna posição-->
-                                        <Text text="1" />
+                                        <Text text="{ClassificacaoModel>posicao}"></Text>
                                         <!-- 2ª Coluna escudo-->
-                                        <Image src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Botafogo_de_Futebol_e_Regatas_logo.svg/1200px-Botafogo_de_Futebol_e_Regatas_logo.svg.png" width="30%" />
+                                        <Image src="{ClassificacaoModel>time/escudo}" width="30%"></Image>
                                         <!-- 3ª Coluna nome do time-->
-                                        <Text text="Botafogo" />
+                                        <Text text="{ClassificacaoModel>time/nome_popular}"></Text>
                                         <!-- 4ª Coluna pontos-->
-                                        <Text text="21" />
+                                        <Text text="{ClassificacaoModel>pontos}"></Text>
                                         <!-- 5ª Coluna jogos-->
-                                        <Text text="8" />
+                                        <Text text="{ClassificacaoModel>jogos}"></Text>
                                         <!-- 6ª Coluna vitórias-->
-                                        <Text text="7" />
+                                        <Text text="{ClassificacaoModel>vitorias}"></Text>
                                         <!-- 7ª Coluna Empates-->
-                                        <Text text="0" />
+                                        <Text text="{ClassificacaoModel>empates}"></Text>
                                         <!-- 8ª Coluna Derrotas-->
-                                        <Text text="1" />
+                                        <Text text="{ClassificacaoModel>derrotas}"></Text>
                                         <!-- 9ª Coluna Gols Marcados-->
-                                        <Text text="16" />
+                                        <Text text="{ClassificacaoModel>gols_pro}"></Text>
                                         <!-- 10ª Coluna Gols Sofridos-->
-                                        <Text text="6" />
+                                        <Text text="{ClassificacaoModel>gols_contra}"></Text>
                                         <!-- 11ª Coluna Saldo de Gols-->
-                                        <Text text="10" />
-                                    </cells>
-                                </ColumnListItem>
-                                <ColumnListItem>
-                                    <cells>
-                                        <!-- 1ª Coluna posição-->
-                                        <Text text="2" />
-                                        <!-- 2ª Coluna escudo-->
-                                        <Image src="https://w7.pngwing.com/pngs/177/904/png-transparent-sociedade-esportiva-palmeiras-campeonato-paulista-copa-do-brasil-choque-rei-paulista-derby-futebol-brasil-emblem-sport-logo.png" width="40%" />
-                                        <!-- 3ª Coluna nome do time-->
-                                        <Text text="Palmeiras" />
-                                        <!-- 4ª Coluna pontos-->
-                                        <Text text="16" />
-                                        <!-- 5ª Coluna jogos-->
-                                        <Text text="4" />
-                                        <!-- 6ª Coluna vitórias-->
-                                        <Text text="4" />
-                                        <!-- 7ª Coluna Empates-->
-                                        <Text text="0" />
-                                        <!-- 8ª Coluna Derrotas-->
-                                        <Text text="1" />
-                                        <!-- 9ª Coluna Gols Marcados-->
-                                        <Text text="17" />
-                                        <!-- 10ª Coluna Gols Sofridos-->
-                                        <Text text="7" />
-                                        <!-- 11ª Coluna Saldo de Gols-->
-                                        <Text text="10" />
+                                        <Text text="{ClassificacaoModel>saldo_gols}"></Text>
                                     </cells>
                                 </ColumnListItem>
                             </items>
@@ -117,6 +91,7 @@
 
                     <IconTabFilter text="Partidas" icon="sap-icon://soccer" key="partidas">
                         <Table headerText="9ª Rodada"
+                        items="{PartidasModel>/partidas}"
                         inset="false">
                             <columns>
                                 <Column width="10%" hAlign="Right">
@@ -135,23 +110,13 @@
                             <items>
                                 <ColumnListItem vAlign="Middle">
                                     <cells>
-                                        <Image src="https://cdn.api-futebol.com.br/escudos/638d34c76d067.svg" width="15%" />
+                                        <Image src="{PartidasModel>time_mandante/escudo}" width="15%" />
                                         <VBox>
-                                            <Text text="Fortaleza x Bahia" />
-                                            <Text text="03/06/2023 16:00" />
+                                            <Text text="{PartidasModel>placar}" />
+                                            <Text text="{PartidasModel>data_realizacao} {PartidasModel>hora_realizacao}" />
+                                            <Text text="{PartidasModel>status}" />
                                         </VBox>
-                                        <Image src="https://cdn.api-futebol.com.br/escudos/638d34a8b6bd8.svg" width="15%" />
-                                    </cells>
-                                </ColumnListItem>
-                        
-                                <ColumnListItem vAlign="Middle">
-                                    <cells>
-                                        <Image src="https://cdn.api-futebol.com.br/escudos/638d34984830b.svg" width="15%" />
-                                        <VBox>
-                                            <Text text="Cruzeiro x Atlético-MG" />
-                                            <Text text="03/06/2023 18:30" />
-                                        </VBox>
-                                        <Image src="https://cdn.api-futebol.com.br/escudos/638d3494f3380.svg" width="15%" />
+                                        <Image src="{PartidasModel>time_visitante/escudo}" width="15%" />
                                     </cells>
                                 </ColumnListItem>
                             </items>                         
