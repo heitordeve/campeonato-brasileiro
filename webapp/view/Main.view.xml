@@ -92,7 +92,7 @@
 
                     <IconTabFilter text="Partidas" icon="sap-icon://soccer" key="partidas">
 
-                        //importando fragment
+                        <!-- importando fragment -->
                         <c:Fragment 
                         fragmentName="campeonatobrasileiro.view.partidas" 
                         type="XML" />
