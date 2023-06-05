@@ -58,11 +58,11 @@
           "bundleName": "campeonatobrasileiro.i18n.i18n"
         }
       },
-      "PartidasModel" : {
+      "PartidasModel2" : {
         "type": "sap.ui.model.json.JSONModel",
         "uri": "model/partidas.json"
       },
-      "ClassificacaoModel" : {
+      "ClassificacaoModel2" : {
         "type": "sap.ui.model.json.JSONModel",
         "uri": "model/classificacao.json"
       }
